@@ -661,7 +661,7 @@ h2 {
 
     .form-container {
         width: 200%; /* Ocupa quase toda a largura da tela */
-        margin: 0 -80px; /* Centraliza o formulário horizontalmente */
+        margin: 0 -70px; /* Centraliza o formulário horizontalmente */
         padding: 20px; /* Ajusta o padding interno */
         border-radius: 10px; /* Suaviza os cantos */
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra */
