@@ -1,0 +1,691 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+body {
+    background-color: #000;
+}
+
+/* Header styles */
+.header {
+    background-color: #000;
+    padding: 10px 0;
+}
+
+/* Estilo do botão do menu hambúrguer */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5); /* Cor da borda do botão */
+}
+
+/* Linhas do menu hambúrguer */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Cor branca para as linhas */
+}
+
+
+.navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.navbar-brand span {
+    color: #fff;
+}
+
+.nav-link {
+    color: #f5f5f5;
+    margin-right: 15px;
+}
+
+.nav-link:hover {
+    color: #50ccf2;
+}
+
+.nav-button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    box-shadow: 0 0 10px 2px #007bff;
+    transform: scale(1.05);
+}
+
+.logo {
+    width: 55px;
+}
+
+/* Estilo principal */
+.main-section {
+    background-color: #000;
+    color: #fff;
+    padding-top: 9px; /* Reduzimos a distância do cabeçalho */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 70vh; /* Altura reduzida para melhor proporção */
+}
+
+.developer-image1 {
+    max-width: 119%; /* Aumentei o tamanho da imagem */
+    border-radius: 10px;
+}
+
+/* Texto */
+.text-container {
+    flex: 0.9;
+    max-width: 600px;
+}
+
+.text-container p {
+    font-size: 20px;
+}
+
+.text-container h1 {
+    font-size: 40px;
+}
+
+.animated-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #00d9ff;
+}
+
+/* Imagem */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.developer-image {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Botão */
+.special-button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.special-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+    transform: skewX(-30deg);
+    transition: all 0.3s;
+}
+
+.special-button:hover::after {
+    left: 150%;
+}
+
+.special-button:hover {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
+}
+
+/* Animação do texto */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Seção Sobre */
+.about-section {
+    background-color: #000;
+    color: #fff;
+    padding: 9px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Imagem */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 350px; /* Aumentei o afastamento da imagem */
+}
+
+.developer-image2 {
+    max-width: 250%; /* Aumentei o tamanho da imagem */
+    border-radius: 10px;
+}
+
+/* Caixa de conteúdo */
+.about-content {
+    flex: 2;
+    background-color: #111;
+    border-radius: 15px;
+    padding: 20px; /* Mantive o espaçamento interno confortável */
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.5);
+    animation: pulse 2s infinite;
+}
+
+/* Luz pulsante */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(0, 217, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(0, 217, 255, 0.5);
+    }
+}
+
+/* Títulos */
+.about-content h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 13px;
+}
+
+.about-content h3 {
+    font-size: 1.25rem;
+    color: #00d9ff;
+    margin-bottom: 20px;
+}
+
+/* Texto */
+.about-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+/* Botão */
+.special-button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.special-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+    transform: skewX(-30deg);
+    transition: all 0.3s;
+}
+
+.special-button:hover::after {
+    left: 150%;
+}
+
+.special-button:hover {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
+}
+
+/* Ícones */
+.icons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icon-placeholder {
+    width: 40px;
+    height: 40px;
+    background-color: #222;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.icon-placeholder:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    background-color: rgb(100, 231, 254);
+}
+
+/* Seção de Serviços */
+.services-section {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/* Caixas de serviço */
+.service-box {
+    background-color: #111;
+    border-radius: 15px;
+    padding: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    text-align: left; /* Alinha o conteúdo dentro da caixa à esquerda */
+}
+
+/* Efeito de brilho e reflexo */
+.service-box:hover {
+    box-shadow: 0 0 30px rgba(0, 217, 255, 0.8), 0 0 50px rgba(0, 217, 255, 0.5) inset;
+    transform: scale(1.02);
+}
+
+/* Ícones */
+.icon-placeholder {
+    width: 50px;
+    height: 50px;
+    background-color: #222;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: all 0.5s ease;
+}
+
+.service-box:hover .icon-placeholder {
+    background-color: rgba(0, 217, 255, 0.5);
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.8);
+}
+
+/* Títulos */
+.service-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Texto */
+.service-box p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 0;
+    text-align: left; /* Alinha os parágrafos à esquerda */
+}
+
+/* Layout */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Seção de Projetos */
+.projects-section {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/* Estilo das imagens dos projetos */
+.project-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.project-box:hover {
+    transform: scale(1.03); /* Aumenta levemente o tamanho ao passar o mouse */
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.6);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Efeito de brilho azul */
+.project-box:hover .project-image {
+    filter: brightness(1.2) saturate(1.5);
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.8);
+}
+
+
+/* Seção de Contato */
+.contact-section {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 0;
+}
+
+h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Layout lado a lado */
+.contact-section .row {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens no topo */
+    justify-content: space-between; /* Mantém o layout lado a lado */
+    gap: 30px; /* Espaçamento entre as colunas */
+    flex-wrap: nowrap; /* Garante que os itens fiquem lado a lado */
+}
+
+/* Caixas de informações */
+.info-box {
+    background: linear-gradient(145deg, #1c1c1c, #000); /* Gradiente no fundo */
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3), 0 0 30px rgba(0, 217, 255, 0.1) inset;
+    transition: all 0.5s ease;
+    width: 100%; /* Garante que as caixas ocupem a largura total */
+}
+
+.info-box:hover {
+    box-shadow: 0 0 30px rgba(0, 217, 255, 0.6), 0 0 50px rgba(0, 217, 255, 0.3) inset;
+    transform: scale(1.03);
+}
+
+.number {
+    color: #00d9ff;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Formulário */
+.form-container {
+    background: #111;
+    border-radius: 15px;
+    padding: 97px 30px; /* Define o comprimento e altura do formulário */
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+    flex: 1; /* Faz o formulário ocupar o espaço restante */
+    margin-top: 88px; /* Alinha o formulário com a primeira caixa */
+}
+
+.form-control {
+    background: #333;
+    border: none;
+    border-radius: 5px;
+    color: #ccc;
+    padding: 10px;
+    width: 100%;
+}
+
+.form-control::placeholder {
+    color: #888;
+}
+
+.submit-button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    display: block; /* Centraliza o botão */
+    margin: 20px auto 0; /* Centraliza o botão e adiciona espaço acima */
+}
+
+.submit-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+    transform: skewX(-30deg);
+    transition: all 0.3s;
+}
+
+.submit-button:hover::after {
+    left: 150%;
+}
+
+.submit-button:hover {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Ajustes de espaçamento */
+.contact-section .col-md-6 {
+    flex: 1; /* Faz as duas colunas ocuparem o mesmo espaço */
+    max-width: 48%; /* Garante largura proporcional das colunas */
+}
+
+/* Rodapé */
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.footer p {
+    margin: 0;
+    color: #ccc;
+}
+
+@media (max-width: 768px) {
+    .main-section {
+        flex-direction: column; /* Alinha os itens em coluna */
+        text-align: center; /* Centraliza o texto */
+        justify-content: center; /* Centraliza verticalmente */
+        align-items: center; /* Centraliza horizontalmente */
+        min-height: calc(50vh - 20px); /* Usa a altura da tela disponível */
+        padding: 2px; /* Adiciona espaçamento interno */
+    }
+
+    .image-container {
+        display: none; /* Remove a imagem completamente */
+    }
+
+    .text-container {
+        margin: 0 auto; /* Centraliza o texto horizontalmente */
+        padding: 0px; /* Espaçamento interno */
+    }
+
+    .text-container h1 {
+        font-size: 1.3rem; /* Ajusta o tamanho da fonte */
+        line-height: 1.5; /* Espaçamento entre linhas */
+    }
+
+    .text-container p {
+        font-size: 0.9rem; /* Ajusta o tamanho da fonte do parágrafo */
+        line-height: 1.4; /* Espaçamento entre linhas */
+    }
+
+    .special-button {
+        font-size: 0.9rem; /* Ajusta o tamanho do botão */
+        padding: 12px 24px; /* Ajusta o padding do botão */
+        border-radius: 20px; /* Suaviza bordas */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Coloca os elementos em coluna */
+        text-align: center; /* Centraliza o texto */
+        justify-content: center; /* Centraliza verticalmente */
+        align-items: center; /* Centraliza horizontalmente */
+        padding: 20px; /* Adiciona espaçamento interno */
+    }
+
+    .about-image {
+        display: none; /* Remove a imagem completamente */
+    }
+
+    .about-content {
+        margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+        padding: 20px; /* Espaçamento interno para melhor visualização */
+        text-align: center; /* Centraliza o texto */
+        box-shadow: none; /* Remove o efeito de luz pulsante */
+        max-width: 600px; /* Limita a largura do conteúdo */
+    }
+
+    .about-content h2 {
+        font-size: 1.8rem; /* Ajusta o tamanho do título */
+        margin-bottom: 15px; /* Espaçamento inferior */
+    }
+
+    .about-content h3 {
+        font-size: 1.5rem; /* Ajusta o subtítulo */
+        margin-bottom: 15px;
+    }
+
+    .about-content p {
+        font-size: 1rem; /* Ajusta o tamanho do texto */
+        line-height: 1.5; /* Espaçamento entre linhas */
+        margin-bottom: 15px;
+    }
+
+    .special-button {
+        font-size: 0.9rem; /* Ajusta o tamanho do botão */
+        padding: 12px 24px; /* Padding ajustado para telas menores */
+        border-radius: 20px; /* Suaviza bordas */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 20px; /* Reduz o padding geral */
+    }
+
+    .contact-section .row {
+        flex-direction: column; /* Empilha os itens */
+        align-items: center; /* Centraliza os itens horizontalmente */
+        gap: 20px; /* Espaçamento entre os elementos */
+    }
+
+    .contact-section h2 {
+        text-align: center; /* Centraliza o título horizontalmente */
+        font-size: 1.2rem; /* Ajusta o tamanho do título */
+        line-height: 1.2; /* Ajusta o espaçamento entre as linhas */
+        margin-bottom: 20px; /* Espaçamento inferior */
+        color: #fff; /* Cor do texto */
+        word-wrap: break-word; /* Garante que o texto não ultrapasse os limites */
+        white-space: normal; /* Impede que o texto fique empilhado */
+    }
+
+    .info-box {
+        width: 200%; /* A largura ocupa quase toda a tela */
+        max-width: 600px; /* Define um limite máximo para a largura */
+        height: auto; /* Ajusta a altura automaticamente com o conteúdo */
+        padding: 20px; /* Espaçamento interno */
+        margin: 15px -80px; /* Centraliza horizontalmente e adiciona espaçamento inferior */
+        text-align: left; /* Alinha o texto à esquerda */
+        border-radius: 10px; /* Arredonda os cantos */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra */
+        background-color: #111; /* Fundo escuro */
+        display: flex; /* Usa flexbox para organizar o conteúdo */
+        flex-wrap: wrap; /* Garante que o conteúdo se ajusta dentro da caixa */
+        align-items: flex-start; /* Alinha os itens no topo */
+    }
+
+    .info-box h3 {
+        font-size: 1.2rem; /* Ajusta o tamanho do título */
+        margin-right: 15px; /* Espaçamento entre o número e o texto */
+        color: #00d9ff; /* Destaque para o número e título */
+        min-width: 120px; /* Garante espaço mínimo para o título */
+    }
+
+    .info-box p {
+        font-size: 1rem; /* Ajusta o tamanho do texto */
+        line-height: 1.6; /* Melhora o espaçamento entre linhas */
+        color: #ccc; /* Cor do texto */
+        flex-grow: 1; /* Permite que o parágrafo ocupe o restante do espaço */
+        word-wrap: break-word; /* Garante que o texto se ajusta dentro da caixa */
+        margin: 0; /* Remove margens extras */
+    }
+
+    .form-container {
+        width: 200%; /* Ocupa quase toda a largura da tela */
+        margin: 0 -80px; /* Centraliza o formulário horizontalmente */
+        padding: 20px; /* Ajusta o padding interno */
+        border-radius: 10px; /* Suaviza os cantos */
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra */
+        text-align: center; /* Centraliza o conteúdo do formulário */
+    }
+
+    .form-container h2 {
+        text-align: center; /* Centraliza o título */
+        font-size: 1.5rem; /* Ajusta o tamanho do título */
+        margin-bottom: 15px; /* Espaçamento inferior */
+    }
+
+    .form-control {
+        font-size: 0.9rem; /* Ajusta o tamanho do texto dos campos */
+        padding: 10px; /* Padding interno */
+        margin-bottom: 15px; /* Espaçamento inferior */
+        border-radius: 5px; /* Suaviza os cantos */
+        border: 1px solid #ccc; /* Adiciona uma borda leve */
+    }
+
+    .submit-button {
+        font-size: 0.9rem; /* Ajusta o tamanho do botão */
+        padding: 12px 20px; /* Padding interno do botão */
+        margin-top: 15px; /* Espaçamento acima do botão */
+        border-radius: 20px; /* Suaviza as bordas */
+    }
+}
