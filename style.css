@@ -633,7 +633,7 @@ h2 {
         max-width: 600px; /* Define um limite máximo para a largura */
         height: auto; /* Ajusta a altura automaticamente com o conteúdo */
         padding: 20px; /* Espaçamento interno */
-        margin: 15px -80px; /* Centraliza horizontalmente e adiciona espaçamento inferior */
+        margin: 15px -70px; /* Centraliza horizontalmente e adiciona espaçamento inferior */
         text-align: left; /* Alinha o texto à esquerda */
         border-radius: 10px; /* Arredonda os cantos */
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma leve sombra */
